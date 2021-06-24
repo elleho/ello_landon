@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React in less than a day
+          Learn React in 240 minutes!!! Yes you can!!!
         </a>
       </header>
     </div>
