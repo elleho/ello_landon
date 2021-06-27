@@ -1,7 +1,7 @@
 var AWS = require("aws-sdk");
 
 AWS.config.update({
-  region: "eu-central-1"
+  region: "us-east-1"
 });
 
 var dynamodb = new AWS.DynamoDB();
@@ -13,7 +13,6 @@ var params = {
     { AttributeName: "src", KeyType: "HASH" },
     // Sort Keys
     { AttributeName: "className", KeyType: "RANGE"}  
-
   ],
   AttributeDefinitions: [
     { AttributeName: "alt", AttributeType: "S" },
@@ -25,7 +24,7 @@ var params = {
       IndexName: "AltIndex",
       KeySchema: [
         { AttributeName: "src", KeyType: "HASH" },
-        { AttributeName: "alt", KeyType: "RANGE" },
+        { AttributeName: "alt", KeyType: "RANGE" }
       ],
       Projection: {
         ProjectionType: "KEYS_ONLY"

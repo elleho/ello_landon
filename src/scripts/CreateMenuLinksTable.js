@@ -1,7 +1,7 @@
 var AWS = require("aws-sdk");
 
 AWS.config.update({
-  region: "eu-central-1"
+  region: "us-east-1"
 });
 
 var dynamodb = new AWS.DynamoDB();

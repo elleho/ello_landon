@@ -1,7 +1,7 @@
 var AWS = require("aws-sdk");
 
 AWS.config.update({
-  region: "eu-central-1"
+  region: "us-east-1"
 });
 
 var dynamodb = new AWS.DynamoDB();
@@ -10,13 +10,11 @@ var params = {
   TableName: "Services",
   KeySchema: [
     // Partition Key
-    { AttributeName: "name", KeyType: "HASH" },
- 
+    { AttributeName: "name", KeyType: "HASH" }  
   ],
   AttributeDefinitions: [
-    { AttributeName: "name", AttributeType: "S" },
-
-  ],
+    { AttributeName: "name", AttributeType: "S" }
+  ], 
   ProvisionedThroughput: {
     ReadCapacityUnits: 10,
     WriteCapacityUnits: 10
