@@ -2,7 +2,7 @@ var AWS = require("aws-sdk");
 var fs = require('fs');
 
 AWS.config.update({
-  region: "us-east-1"
+  region: "eu-central-1"
 });
 
 console.log("Writing entries to MenuLinks table.");
